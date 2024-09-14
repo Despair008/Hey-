@@ -1,0 +1,115 @@
+/* Reiniciar estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general del cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://pbs.twimg.com/media/E6zcvwiVEAIhMoe?format=jpg&name=4096x4096');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Contenedor principal con fondo semitransparente */
+.container {
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    margin: 100px auto;
+    max-width: 900px;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Estilos para el título principal */
+h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 6px #000, 0px 0px 10px rgba(255, 255, 0, 0.7);
+    animation: glow 2s infinite alternate;
+}
+
+/* Animación de brillo en el título */
+@keyframes glow {
+    from {
+        text-shadow: 3px 3px 6px #000, 0px 0px 10px rgba(255, 255, 0, 0.3);
+    }
+    to {
+        text-shadow: 3px 3px 6px #000, 0px 0px 20px rgba(255, 255, 0, 0.8);
+    }
+}
+
+/* Contenedor de los personajes */
+.characters {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0;
+}
+
+/* Estilos para las imágenes de personajes */
+.characters div {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.characters img {
+    width: 180px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    border: 2px solid #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Animación de zoom al pasar el mouse sobre los personajes */
+.characters div:hover {
+    transform: scale(1.1);
+}
+
+.characters img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 30px rgba(255, 215, 0, 0.7), 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo para los subtítulos de los personajes */
+.characters h2 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 4px #000;
+}
+
+/* Mensaje adicional */
+.message {
+    margin-top: 30px;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px #000;
+}
+
+/* Efecto de "brillo" lento en el texto */
+.message {
+    animation: slowGlow 5s infinite alternate;
+}
+
+@keyframes slowGlow {
+    from {
+        text-shadow: 1px 1px 2px #000;
+    }
+    to {
+        text-shadow: 1px 1px 8px rgba(255, 255, 255, 0.6);
+    }
+}
+
+/* Animación de entrada lenta */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
